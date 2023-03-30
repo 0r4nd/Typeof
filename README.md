@@ -2,7 +2,10 @@ Typeof class
 =====================
 
 
-```javascript Typeof()``` usage
+Typeof() usage
+```javascript
+if (Typeof([]) === 'array') console.log("it's an array');
+```
 ---------------------
 | input             | result      |
 |:------------------|:------------|
