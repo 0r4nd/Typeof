@@ -2,9 +2,8 @@ Typeof class
 =====================
 
 
-Typeof()
+Typeof() usage
 ---------------------
-
 | input             | result      |
 |:------------------|:------------|
 | Typeof() | 'undefined' |
@@ -24,7 +23,8 @@ Typeof()
 | Typeof("a"[Symbol.iterator]()) | 'string iterator' |
 | Typeof(()=>{}) | 'function' |
 
-######## Typeof.isPrimitive() ########
+Typeof.isPrimitive() usage
+---------------------
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isPrimitive(true) | 'true' |
@@ -40,7 +40,8 @@ Typeof()
 | Typeof.isPrimitive(BigInt("42")) | 'true' |
 | Typeof.isPrimitive(new String("a")) | 'false' |
 
-######## Typeof.isArray() ########
+Typeof.isArray() usage
+---------------------
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isArray([]) | 'true' |
@@ -48,14 +49,16 @@ Typeof()
 | Typeof.isArray("a") | 'false' |
 | Typeof.isArray(new Float32Array(2)) | 'false' |
 
-######## Typeof.isString() ########
+Typeof.isString() usage
+---------------------
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isString("a") | 'true' |
 | Typeof.isString(new String("a")) | 'true' |
 | Typeof.isString((_=>"a")()) | 'true' |
 
-######## Typeof.isIterable() ########
+Typeof.isIterable() usage
+---------------------
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isIterable([]) | 'true' |
@@ -65,7 +68,8 @@ Typeof()
 | Typeof.isIterable(new String("a")) | 'true' |
 | Typeof.isIterable(customiterator) | 'true' |
 
-######## Primitives (or wrappers to them) ########
+Primitives (or wrappers to them) ########
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types() | ['undefined','primitive'] | -- |
@@ -83,13 +87,15 @@ Typeof()
 
 ¹ (typeof null) return "object" only for legacy reasons.
 
-######## Basic objects ########
+Basic objects
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types({}) | ['object','object'] | -- |
 | Typeof.types(new Object()) | ['object','object'] | -- |
 
-######## Arrays, Set, Map, etc ########
+Arrays, Set, Map, etc
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types([]) | ['array','object'] | -- |
@@ -105,7 +111,8 @@ Typeof()
 | Typeof.types((new Map([[1,'a']])).values()) | ['map iterator','iterator'] | -- |
 | Typeof.types("a"[Symbol.iterator]()) | ['string iterator','iterator'] | -- |
 
-######## Functions ########
+Functions
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types(function(){}) | ['function','object'] | -- |
@@ -117,25 +124,29 @@ Typeof()
 | Typeof.types(function *(){}) | ['generatorFunction','generator'] | -- |
 | Typeof.types((function(){return arguments})()) | ['arguments','object'] | -- |
 
-######## Regexp ########
+Regexp
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types(/a/g) | ['regexp','object'] | -- |
 | Typeof.types(new RegExp("a","g")) | ['regexp','object'] | -- |
 
-######## Errors ########
+Errors
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types(new Error("error")) | ['error','object'] | -- |
 | Typeof.types(new TypeError("type error")) | ['error','object'] | -- |
 
-######## Misc ########
+Misc
+---------------------
 | input       | result      | comment     |
 |:------------|:------------|:------------|
 | Typeof.types(new Date()) | ['date','object'] | -- |
 | Typeof.types(Promise.resolve()) | ['promise','object'] | -- |
 
-######## User Classes ########
+User Classes
+---------------------
 ```javascript
 function Vector2(x=0,y=0){this.x=x;this.y=y;}
 var PersonAnonym = function(name='',age=20){this.name=name;this.age=age;}
