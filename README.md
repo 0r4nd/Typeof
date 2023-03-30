@@ -5,7 +5,7 @@ Typeof class
 Typeof() usage
 ---------------------
 ```javascript
-if (Typeof([]) === 'array') console.log("it's an array');
+if (Typeof([]) === 'array') console.log("it's an array");
 ```
 | input             | result      |
 |:------------------|:------------|
@@ -28,6 +28,9 @@ if (Typeof([]) === 'array') console.log("it's an array');
 
 Typeof.isPrimitive() usage
 ---------------------
+```javascript
+if (Typeof.isPrimitive(1)) console.log("primitive type!");
+```
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isPrimitive(true) | 'true' |
@@ -45,6 +48,9 @@ Typeof.isPrimitive() usage
 
 Typeof.isArray() usage
 ---------------------
+```javascript
+if (Typeof.isArray(new Array())) console.log("array!");
+```
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isArray([]) | 'true' |
@@ -54,6 +60,9 @@ Typeof.isArray() usage
 
 Typeof.isString() usage
 ---------------------
+```javascript
+if (Typeof.isString((_=>"a")())) console.log("im a string!");
+```
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isString("a") | 'true' |
@@ -62,6 +71,9 @@ Typeof.isString() usage
 
 Typeof.isIterable() usage
 ---------------------
+```javascript
+if (Typeof.isIterable(new Int32Array(5)) console.log("iterable!");
+```
 | input             | result      |
 |:------------------|:------------|
 | Typeof.isIterable([]) | 'true' |
