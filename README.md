@@ -2,7 +2,7 @@ Typeof class
 =====================
 
 
-Typeof() usage
+```javascript Typeof()``` usage
 ---------------------
 | input             | result      |
 |:------------------|:------------|
@@ -157,6 +157,6 @@ Typeof.addType(PersonAnonym, 'To be,', 'or not to be');
 ```
 | input       | result      | comment     |
 |:------------|:------------|:------------|
-| ```javascriptTypeof.types(new Vector2())``` | ['vector2','object'] | -- |
-| ```javascript Typeof.types(new Date()) | ['object','object']``` | because removed above |
+| Typeof.types(new Vector2()) | ['vector2','object'] | -- |
+| Typeof.types(new Date()) | ['object','object'] | because removed above |
 | Typeof.types(new PersonAnonym()) | ['To be,','or not to be'] | -- |
