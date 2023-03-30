@@ -3,10 +3,10 @@ Typeof class
 
 
 Typeof() usage
+---------------------
 ```javascript
 if (Typeof([]) === 'array') console.log("it's an array');
 ```
----------------------
 | input             | result      |
 |:------------------|:------------|
 | Typeof() | 'undefined' |
